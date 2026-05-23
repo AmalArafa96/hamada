@@ -19,9 +19,10 @@ section.contact-me .fa-envelope {
 
 /* ─── Form card ──────────────────────────────── */
 section.contact-me .form {
-  margin-top: 50px;
+  margin:50px 0;
   display: flex;
   justify-content: center;
+  
 }
 
 section.contact-me form {
@@ -47,10 +48,11 @@ section.contact-me .form-group {
 }
 
 section.contact-me label {
-  font-family: var(--heading-font);
+  margin: 5px 10px;
+  padding-left: 2px;
   font-weight: 600;
-  font-size: 0.88rem;
-  color: var(--title);
+  font-size: 16px;
+  color: var(--second-color);
   letter-spacing: 0.4px;
 }
 
@@ -95,12 +97,12 @@ section.contact-me #message:focus {
 
 /* ─── Submit button ──────────────────────────── */
 section.contact-me .submit {
-  font-family: var(--heading-font);
+  
   font-weight: 700;
   font-size: 0.95rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  background: linear-gradient(135deg, var(--second-color), var(--accent-blue));
+  background: linear-gradient(90deg, #00d4ff, #0077ff);
   color: #000 !important;
   border: none;
   border-radius: 50px;
