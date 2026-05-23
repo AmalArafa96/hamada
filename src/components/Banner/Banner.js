@@ -49,17 +49,17 @@ export default function Banner() {
   };
 
   return (
-    <section className="banner py-5" id="home">
+    <section className="banner py-5 " id="home">
       <Container>  
-        <Row className="align-items-center py-5">
+        <Row className="align-items-center  py-5 my-5">
           {/* LEFT */}
           <Col xs={12} md={6}>
-            <span className="tagline mt-5 p-3">Welcome to my Portfolio</span>
+            <span className="tagline my-3 ">Welcome to my Portfolio</span>
             <h1 className=" py-3">
               Hi! I'm Amal <span className="wrap">{text}</span>
             </h1>
             <p className="sup-title py-2">
-              Front-End Developer spicialist in React and Next, focused on
+              Front-End Developer specialist in React and Next, focused on
               building fast, responsive, and user-friendly web applications.
             </p>
            
@@ -104,27 +104,26 @@ export default function Banner() {
                 </a>
               </div>
 
-              <div className="hero-buttons">
-             <button className="hero-btn">
+              <div className="d-flex justify-content-center align-items-center flex-co gap-3 mt-4 flex-wrap">
+             <button className="hero-btn text-center ">
               <a
                 href="/My.Cv/Amal-Arafa-FlowCV-Resume.pdf"
                 download
-                className="text-decoration-none"
+                className=" text-decoration-none text-center"
               >
                 Download CV <i className="fa-solid fa-download"></i>
               </a>
               </button>
-              <button className="hero-btn" onClick={handleContact}>
-                Let's Connect <i className="fa-solid fa-arrow-right"></i>
+              <button className="hero-btn text-center" onClick={handleContact}>
+                Let’s Connect
+                <i className="fa-solid fa-arrow-right"></i>
               </button>
             </div>
           </Col>
 
           {/* RIGHT */}
-          <Col xs={12} md={6} className="text-center">
-            <div className="hero-img-wrapper">
-              <img src={headerImg} alt="Amal Arafa - Frontend Developer" className="hero-img" />
-            </div>
+          <Col xs={12} md={6}   className="d-flex justify-content-center align-items-center">
+            <img src={headerImg} alt="header" className="hero-img" />
           </Col>
         </Row>
        
