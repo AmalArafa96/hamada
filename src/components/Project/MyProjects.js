@@ -1,4 +1,4 @@
-import img0 from "../../assets/img/danialProj.png";
+import img0 from "../../assets/img/bakery.jpg";
 import img1 from "../../assets/img/ecomProj.png";
 import img2 from "../../assets/img/movieProj.jpg";
 import img3 from "../../assets/img/yummyProj.png";
@@ -6,12 +6,12 @@ import img4 from "../../assets/img/wheaterProj.png";
 export const myProjects=[
   {
     id:0,
-    projectTitle:"Danial Page",
-    projDesc: "Personal portfolio",
+    projectTitle:"Family Bakery",
+    projDesc: "Bakery Landing Page",
     projTools: "I used Tools : ", 
     tools: ["Html", "BootStrab", "Css"],
-    gitHubLink:"",
-    liveLink:"",
+    gitHubLink:"https://github.com/AmalArafa96/bakery.git",
+    liveLink:"https://amalarafa96.github.io/bakery/",
     category:['css'],
     imgPath:img0
   },

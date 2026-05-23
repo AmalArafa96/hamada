@@ -21,29 +21,31 @@ main#projects {
 }
 
 .left-section button {
-  font-family: var(--heading-font);
   font-weight: 600;
-  font-size: 0.88rem;
-  padding: 9px 22px;
-  border-radius: 50px;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 30px;
   border: 1px solid rgba(255,255,255,0.08);
   background: rgba(255,255,255,0.03);
-  color: var(--suptitle);
+  background-color: #162E42;
   cursor: pointer;
+  color: var(--second-color);
   transition: all 0.28s ease;
   text-transform: capitalize;
   letter-spacing: 0.3px;
+
+ 
 }
 
 .left-section button:hover {
-  background: rgba(255,255,255,0.07);
-  border-color: rgba(255,255,255,0.16);
-  color: var(--title);
+  
+  border-color: var(--second-color);
+  color:#fff;
 }
 
 .left-section button.active {
-  background: linear-gradient(135deg, var(--second-color), var(--accent-blue));
-  color: #000 !important;
+  background: var(--second-color);
+  color:#000 !important;
   border-color: transparent;
   font-weight: 700;
   box-shadow: 0 4px 16px rgba(0,212,255,0.28);
@@ -61,35 +63,24 @@ main#projects {
   background: rgba(255,255,255,0.025) !important;
   border: 1px solid rgba(255,255,255,0.06) !important;
   border-radius: 22px !important;
+  width: 90%;
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.16,1,0.3,1);
+  transition: all .3s;
   display: flex;
   flex-direction: column;
   height: 100%;
-  position: relative;
-}
-
-.card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--second-color), transparent);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  z-index: 2;
+  
 }
 
 .card:hover {
-  border-color: rgba(0,212,255,0.28) !important;
-  transform: translateY(-10px);
+  border-color: var(--second-color) !important;
+  transform: rotate(1deg);
   box-shadow:
     0 24px 55px rgba(0,0,0,0.38),
     0 0 30px rgba(0,212,255,0.07);
   background: rgba(255,255,255,0.04) !important;
 }
 
-.card:hover::before { opacity: 1; }
 
 /* Image */
 .card img {
@@ -97,12 +88,12 @@ main#projects {
   height: 195px;
   object-fit: cover;
   border-bottom: 1px solid rgba(255,255,255,0.05);
-  transition: transform 0.55s ease;
+  
   border-radius: 0 !important;
   padding: 0 !important;
 }
 
-.card:hover img { transform: scale(1.06); }
+
 
 /* Box content */
 .card .box {
@@ -118,36 +109,35 @@ main#projects {
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--title);
-  margin-bottom: 8px;
+  
+  color: var(--second-color);
   text-transform: capitalize;
   line-height: 1.25;
 }
 
-.card .box .suptitle {
-  color: var(--suptitle);
-  font-size: 0.87rem;
+.card .box .suptitl {
+  color: #fff;
+  font-size: 16px;
   line-height: 1.6;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
 /* Tech tags */
 .tools {
-  display: flex;
-  flex-wrap: wrap;
   gap: 7px;
   margin-top: 14px;
   margin-bottom: 20px;
 }
 
 .tools .badge {
-  font-family: var(--heading-font) !important;
-  font-size: 0.72rem !important;
+  font-size: 12px !important;
   font-weight: 600 !important;
-  background: rgba(0,212,255,0.08) !important;
-  color: var(--second-color) !important;
+  background: var(--second-color) !important;
+  color: #000 !important;
   border: 1px solid rgba(0,212,255,0.16) !important;
   border-radius: 30px !important;
-  padding: 5px 13px !important;
+  margin-bottom: 3px;
+  
   letter-spacing: 0.2px;
 }
 
@@ -162,48 +152,23 @@ main#projects {
 .icons a {
   font-family: var(--heading-font) !important;
   font-weight: 600 !important;
-  font-size: 0.83rem !important;
+  font-size: 12px !important;
   padding: 9px 18px !important;
   border-radius: 50px !important;
   display: inline-flex !important;
   align-items: center !important;
   gap: 6px !important;
-  transition: all 0.28s ease !important;
   text-decoration: none !important;
   flex: 1;
+  transition: .3s;
+  background-color: var(--second-color);
+  color: #000 !important;
   justify-content: center;
 }
-
-/* Source (ghost) */
-.icons a:first-child {
-  background: rgba(255,255,255,0.04) !important;
-  color: var(--title) !important;
-  border: 1px solid rgba(255,255,255,0.09) !important;
+.icons a:hover{
+ transform: scale(1.1);
 }
 
-.icons a:first-child:hover {
-  background: rgba(255,255,255,0.08) !important;
-  border-color: rgba(255,255,255,0.18) !important;
-  transform: translateY(-2px);
-}
-
-/* Live preview (gradient) */
-.icons a:last-child {
-  background: linear-gradient(135deg, var(--second-color), var(--accent-blue)) !important;
-  color: #000 !important;
-  border: none !important;
-}
-
-.icons a:last-child:hover {
-  box-shadow: 0 6px 18px rgba(0,212,255,0.32) !important;
-  transform: translateY(-2px);
-}
-
-.icons a i,
-.icons a svg {
-  font-size: 0.9rem !important;
-  color: inherit !important;
-}
 
 /* ─── Responsive ─────────────────────────────── */
 @media (max-width: 768px) {
@@ -211,6 +176,11 @@ main#projects {
 }
 
 @media (max-width: 576px) {
+ .card{
+   width: 100%;
+   max-width: 90%;
+   margin: 0 auto;
+ }
   .left-section button {
     font-size: 0.82rem;
     padding: 8px 16px;

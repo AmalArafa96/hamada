@@ -86,10 +86,10 @@ export default function Projects() {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", stiffness: 50, damping: 8 }}
-                className="col-12 col-sm-6 col-lg-3 d-flex justify-content-center"
+                className="col-12 col-sm-6 col-lg-4 d-flex justify-content-center"
                 key={item.id}
               >
-                <div className="card ">
+                <div className="card p-4 rounded-3">
                   <img
                     src={item.imgPath}
                     alt={item.projectTitle}
