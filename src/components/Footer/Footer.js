@@ -47,7 +47,7 @@ export default function Footer() {
               transition={{ duration: 0.8 }}
             >
               <h5 className="">Services</h5>
-              <ul className="footer-service d-flex flex-column align-items-center">
+              <ul className="footer-service list-unstyled d-flex flex-column align-items-center">
                 <li>UI/UX Design</li>
                 <li>Web Development</li>
                 <li>Responsive Design</li>
@@ -111,17 +111,19 @@ export default function Footer() {
         </Row>
 
         {/* Bottom */}
-        <Row className="footer-bottom">
-          <Col md={5}>
-            <p>© {new Date().getFullYear()} Amal. All rights reserved.</p>
-          </Col>
+        <Row className="footer-bottom my-4 justify-content-center align-items-center text-center">
+  <Col md={5} className="d-flex justify-content-center">
+    <p className="sup-title">
+      © {new Date().getFullYear()} Amal. All rights reserved.
+    </p>
+  </Col>
 
-          <Col md={5} className="text-center text-md-end">
-            <button className="top-btn" onClick={scrollToTop}>
-              <FaArrowUp />
-            </button>
-          </Col>
-        </Row>
+  <Col md={5} className="d-flex justify-content-center my-3">
+    <button className="top-btn" onClick={scrollToTop}>
+      <FaArrowUp />
+    </button>
+  </Col>
+</Row>
       </Container>
     </footer>
   );
