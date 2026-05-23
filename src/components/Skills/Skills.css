@@ -59,8 +59,8 @@
 .skill-card h5 {
   font-family: var(--heading-font);
   font-weight: 600;
-  font-size: 1.05rem;
-  color: var(--title);
+  font-size: 18px;
+  color: var(--second-color);
   margin-bottom: 22px;
   letter-spacing: 0.2px;
   line-height: 1.3;
