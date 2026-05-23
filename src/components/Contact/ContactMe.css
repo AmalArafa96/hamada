@@ -1,0 +1,152 @@
+/* ─── Contact Section ────────────────────────── */
+section.contact-me {
+  position: relative;
+  padding: 120px 0;
+  background:
+    radial-gradient(ellipse 60% 55% at 80% 30%, rgba(0,212,255,0.06) 0%, transparent 60%),
+    var(--main-color);
+  overflow: hidden;
+}
+
+/* ─── Header icon ────────────────────────────── */
+section.contact-me .fa-envelope {
+  font-size: 1.8rem;
+  color: var(--second-color);
+  margin-right: 12px;
+  vertical-align: middle;
+  text-shadow: 0 0 16px rgba(0,212,255,0.35);
+}
+
+/* ─── Form card ──────────────────────────────── */
+section.contact-me .form {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+section.contact-me form {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.07);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 26px;
+  padding: 46px 42px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.32);
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+/* ─── Field groups ───────────────────────────── */
+section.contact-me .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+section.contact-me label {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--title);
+  letter-spacing: 0.4px;
+}
+
+/* ─── Inputs / Textarea ──────────────────────── */
+section.contact-me #email,
+section.contact-me #message {
+  width: 100%;
+  padding: 13px 18px;
+  background: rgba(12, 20, 42, 0.55);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  font-family: var(--body-font);
+  font-size: 0.95rem;
+  color: var(--title);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+section.contact-me #message {
+  min-height: 130px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+section.contact-me #email::placeholder,
+section.contact-me #message::placeholder {
+  color: rgba(143,163,191,0.5);
+}
+
+section.contact-me #email:hover,
+section.contact-me #message:hover {
+  border-color: rgba(0,212,255,0.22);
+  background: rgba(12,20,42,0.75);
+}
+
+section.contact-me #email:focus,
+section.contact-me #message:focus {
+  border-color: var(--second-color);
+  background: rgba(12,20,42,0.9);
+  box-shadow: 0 0 0 3px rgba(0,212,255,0.1), 0 0 18px rgba(0,212,255,0.12);
+}
+
+/* ─── Submit button ──────────────────────────── */
+section.contact-me .submit {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, var(--second-color), var(--accent-blue));
+  color: #000 !important;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 32px;
+  cursor: pointer;
+  transition: all 0.32s ease;
+  box-shadow: 0 4px 18px rgba(0,212,255,0.22);
+  align-self: stretch;
+}
+
+section.contact-me .submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0,212,255,0.38);
+}
+
+section.contact-me .submit:disabled {
+  background: rgba(255,255,255,0.08);
+  color: var(--suptitle) !important;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* ─── Success message ────────────────────────── */
+h3.message {
+  font-family: var(--heading-font);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--second-color);
+  text-align: center;
+}
+
+/* ─── Responsive ─────────────────────────────── */
+@media (max-width: 768px) {
+  section.contact-me { padding: 80px 0; }
+  section.contact-me form {
+    padding: 32px 24px;
+    border-radius: 20px;
+    margin: 0 16px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  section.contact-me form { padding: 26px 18px; gap: 20px; }
+  section.contact-me #email,
+  section.contact-me #message { padding: 11px 14px; font-size: 0.9rem; }
+  section.contact-me .submit { padding: 13px 24px; font-size: 0.88rem; }
+}

@@ -1,0 +1,36 @@
+/* ─── Loader container ───────────────────────── */
+.loader-container {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-container svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+/* Track circle */
+.loader-container svg circle:first-child {
+  stroke: rgba(255, 255, 255, 0.06);
+}
+
+/* Progress arc */
+.loader-container svg circle:last-child {
+  filter: drop-shadow(0 0 4px rgba(0, 212, 255, 0.55));
+}
+
+.loader-container .percentage {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--title);
+  position: relative;
+  z-index: 1;
+}

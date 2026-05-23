@@ -1,0 +1,197 @@
+/* ─── Floating Navbar ─────────────────────────── */
+.custom-navbar {
+  position: fixed !important;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(92%, 1140px);
+  z-index: 1050;
+  background: rgba(5, 13, 26, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 60px;
+  padding: 8px 24px !important;
+  transition: top 0.4s ease, background 0.4s ease, box-shadow 0.4s ease,
+              transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-radius 0.35s ease;
+  /* needed so the mobile dropdown is positioned relative to this pill */
+  overflow: visible !important;
+}
+
+/* Scrolled */
+.custom-navbar.scrolled {
+  top: 10px;
+  background: rgba(5, 13, 26, 0.88);
+  border-color: rgba(0, 212, 255, 0.14);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Hidden (scrolling down) */
+.custom-navbar.hidden {
+  transform: translateX(-50%) translateY(-130%);
+}
+
+/* ─── Brand ──────────────────────────────────── */
+.name {
+  font-family: var(--heading-font);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--title) !important;
+  letter-spacing: 1.5px;
+  transition: opacity 0.25s;
+  flex-shrink: 0;
+}
+.name:hover { opacity: 0.8; }
+.name span  { color: var(--second-color); }
+
+/* ─── Toggler button ─────────────────────────── */
+.custom-navbar .navbar-toggler {
+  border: 1.5px solid rgba(0, 212, 255, 0.35) !important;
+  border-radius: 10px;
+  padding: 6px 11px;
+  background: transparent;
+  transition: background 0.25s, border-color 0.25s;
+  flex-shrink: 0;
+}
+.custom-navbar .navbar-toggler:focus {
+  box-shadow: none !important;
+  outline: none;
+}
+.custom-navbar .navbar-toggler:hover {
+  background: rgba(0, 212, 255, 0.08);
+  border-color: rgba(0, 212, 255, 0.6) !important;
+}
+.custom-navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(240,246,255,0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  width: 22px;
+  height: 22px;
+}
+
+/* ─── Desktop nav links ──────────────────────── */
+.nav-links {
+  gap: 4px;
+  align-items: center;
+}
+
+.nav-links .nav-link {
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--suptitle) !important;
+  padding: 7px 15px !important;
+  border-radius: 40px;
+  position: relative;
+  transition: color 0.25s ease, background 0.25s ease;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+.nav-links .nav-link:hover {
+  color: var(--title) !important;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-links .nav-link.active {
+  color: var(--second-color) !important;
+  background: rgba(0, 212, 255, 0.07);
+}
+
+/* Active dot indicator (desktop only) */
+.nav-links .nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background: var(--second-color);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--second-color);
+}
+
+/* ─── MOBILE MENU (≤ 991px) ──────────────────── */
+@media (max-width: 991px) {
+
+  /* Navbar pill becomes a rounded rectangle */
+  .custom-navbar {
+    top: 10px;
+    width: 92%;
+    border-radius: 20px;
+    padding: 10px 16px !important;
+  }
+
+  .custom-navbar.scrolled {
+    top: 8px;
+  }
+
+  /* The collapsible panel */
+  .navbar-collapse {
+    position: absolute;
+    top: calc(100% + 10px);   /* right below the navbar pill */
+    left: 0;
+    right: 0;
+    background: rgba(4, 11, 24, 0.97);
+    backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(28px);
+    border: 1px solid rgba(0, 212, 255, 0.12);
+    border-radius: 20px;
+    padding: 10px;
+    z-index: 1040;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    /* smooth open/close handled by Bootstrap, but add a nice transition */
+    overflow: hidden;
+  }
+
+  /* Stack links vertically */
+  .nav-links {
+    flex-direction: column !important;
+    gap: 6px;
+    width: 100%;
+    padding: 4px 0;
+  }
+
+  /* Each mobile link */
+  .nav-links .nav-link {
+    display: block !important;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 13px 20px !important;
+    border-radius: 14px;
+    color: var(--suptitle) !important;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin: 0;
+  }
+
+  .nav-links .nav-link:hover {
+    color: var(--title) !important;
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-links .nav-link.active {
+    color: var(--second-color) !important;
+    background: rgba(0, 212, 255, 0.09);
+    border-color: rgba(0, 212, 255, 0.2);
+  }
+
+  /* Hide desktop dot */
+  .nav-links .nav-link.active::after { display: none; }
+}
+
+/* Extra small screens */
+@media (max-width: 420px) {
+  .custom-navbar {
+    width: 96%;
+    padding: 9px 12px !important;
+  }
+
+  .name { font-size: 1.2rem; }
+
+  .nav-links .nav-link {
+    font-size: 0.95rem;
+    padding: 12px 16px !important;
+  }
+}

@@ -1,0 +1,24 @@
+/* ── App.css: Only keep what index.css and component files don't cover ── */
+
+/* Scroll offset for fixed navbar */
+html {
+  scroll-padding-top: 80px;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App {
+  flex: 1;
+}
+
+p.danger { color: #ef4444; }
+
+/* Headings reset (already in index.css but kept as safeguard) */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: normal;
+}

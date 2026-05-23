@@ -1,0 +1,182 @@
+/* ─── Footer ─────────────────────────────────── */
+.footer {
+  background: #020a18;
+  color: var(--title);
+  padding: 90px 0 32px;
+  position: relative;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+/* subtle top glow line */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 10%; right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0,212,255,0.35), transparent);
+}
+
+/* ─── Logo ───────────────────────────────────── */
+.footer h4.name {
+  font-family: var(--heading-font);
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--title) !important;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
+.footer h4.name span { color: var(--second-color); }
+
+.footer p.sup-title {
+  font-size: 0.9rem;
+  color: var(--suptitle) !important;
+  line-height: 1.65;
+  max-width: 260px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* ─── Headings ───────────────────────────────── */
+.footer h5 {
+  font-family: var(--heading-font);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--title) !important;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+/* ─── Services list ──────────────────────────── */
+.footer-service {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-service li {
+  font-size: 0.9rem;
+  color: var(--suptitle);
+  margin-bottom: 12px;
+  padding-left: 16px;
+  position: relative;
+  transition: all 0.28s ease;
+  cursor: default;
+}
+
+.footer-service li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--second-color);
+  font-weight: 700;
+  transition: transform 0.2s;
+}
+
+.footer-service li:hover {
+  color: var(--title);
+  padding-left: 20px;
+}
+
+.footer-service li:hover::before { transform: translateX(2px); }
+
+/* ─── Contact email ──────────────────────────── */
+.footer p.contact-email {
+  font-size: 0.9rem;
+  color: var(--suptitle);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+/* ─── Social icons ───────────────────────────── */
+.footer .social-icons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.footer .social-icons a {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.07);
+  background: rgba(255,255,255,0.03);
+  font-size: 1.05rem;
+  color: var(--suptitle) !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  background: var(--second-color);
+  color: #000 !important;
+  border-color: var(--second-color);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px rgba(0,212,255,0.28);
+}
+
+.footer .social-icons a:hover svg,
+.footer .social-icons a:hover i { color: #000 !important; }
+
+.footer .social-icons svg { font-size: 1.05rem; }
+
+/* brand colours at rest */
+.footer a[aria-label="linkedin"] svg { color: #60a5fa; }
+.footer a[href*="wa.me"] svg         { color: #4ade80; }
+.footer a[aria-label="facebook"] svg { color: #60a5fa; }
+
+/* ─── Divider + bottom bar ───────────────────── */
+.footer-bottom {
+  margin-top: 60px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  align-items: center;
+}
+
+.footer-bottom p {
+  font-size: 0.85rem;
+  color: rgba(143,163,191,0.6);
+  margin-bottom: 0;
+}
+
+/* ─── Scroll-to-top ──────────────────────────── */
+.top-btn {
+  width: 46px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--second-color), var(--accent-blue));
+  color: #000 !important;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0,212,255,0.25);
+}
+
+.top-btn:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,212,255,0.4);
+}
+
+.top-btn svg { font-size: 1rem; color: #000 !important; }
+
+/* ─── Responsive ─────────────────────────────── */
+@media (max-width: 768px) {
+  .footer            { padding: 60px 0 28px; }
+  .footer-bottom     { margin-top: 40px; }
+  .footer-bottom .text-md-end {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
+}
