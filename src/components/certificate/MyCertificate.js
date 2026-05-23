@@ -31,7 +31,7 @@ export const myCertificate = [
     certTitle: "Frontend Development Internship",
     certPlace:"Web Master Company",
     certDescription:
-      "Frontend development training using HTML, CSS, JavaScript, and React with practical project experience in building responsive websites.",
+    "Frontend training in HTML, CSS, JavaScript, and React with experience building responsive web projects.",
     certLink: "https://drive.google.com/file/d/1uA6Vyg1r-5Cp5T14UQax40N-CasR2ZSK/view?usp=sharing",
   },
 ];

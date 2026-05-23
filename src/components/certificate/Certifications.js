@@ -36,7 +36,7 @@ export default function Certifications() {
                     href={item.certLink}
                     target="_blank"
                     rel="noreferrer"
-                    className="btn  mb-4 align-self-center"
+                    className="hero-btn my-4 align-self-center text-decoration-none"
                   >
                     View Certificate
                   </a>
